@@ -6,8 +6,8 @@ class Navbar extends Component {
   state = {
     navLinks: [
       { text: 'Home', to: '/', exact: true },
-      { text: 'About Us', to: '/aboutus' },
-      { text: 'Forum', to: '/forum' },
+      { text: 'About Us', to: '/about-us' },
+      { text: 'Forum', to: 'https://www.discourse.org/', external: true },
       { text: 'Contact', to: '/contact' },
     ],
     navOpen: false,
@@ -29,7 +29,7 @@ class Navbar extends Component {
         <nav
           className=" fixed w-full z-50 pin-t
       bg-safe-green-darker
-      px-12 py-6"
+      px-12 py-6 mb-6"
         >
           <div className="container mx-auto flex items-center justify-between flex-wrap">
             <Link
@@ -72,6 +72,7 @@ class Navbar extends Component {
                       item={item}
                       closeNav={this.closeNavBar}
                       key={i}
+                      external
                     />
                   ))
                 : null}

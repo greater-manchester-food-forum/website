@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 const NavBarLink = props => {
   const {
     item: { text, to, exact },
+    external,
   } = props;
   return (
     <NavLink

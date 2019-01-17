@@ -6,7 +6,9 @@ import {
   Redirect,
 } from 'react-router-dom';
 import Home from './components/Home';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
+import AboutUs from './components/AboutUs';
+import Contact from './components/Contact';
 
 class App extends Component {
   render() {
@@ -16,6 +18,8 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/about-us" component={AboutUs} />
+            <Route exact path="/contact" component={Contact} />
           </Switch>
         </React.Fragment>
       </Router>

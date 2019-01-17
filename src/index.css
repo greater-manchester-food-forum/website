@@ -3949,6 +3949,10 @@ table {
   height: 100%;
 }
 
+.h-halfscreen {
+  height: 50vh;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -7477,6 +7481,13 @@ table {
 }
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
+.home-screen-image {
+  background-image: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('./images/pasta.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
@@ -10901,6 +10912,10 @@ table {
 
   .sm\:h-full {
     height: 100%;
+  }
+
+  .sm\:h-halfscreen {
+    height: 50vh;
   }
 
   .sm\:h-screen {
@@ -17841,6 +17856,10 @@ table {
     height: 100%;
   }
 
+  .md\:h-halfscreen {
+    height: 50vh;
+  }
+
   .md\:h-screen {
     height: 100vh;
   }
@@ -24779,6 +24798,10 @@ table {
     height: 100%;
   }
 
+  .lg\:h-halfscreen {
+    height: 50vh;
+  }
+
   .lg\:h-screen {
     height: 100vh;
   }
@@ -31715,6 +31738,10 @@ table {
 
   .xl\:h-full {
     height: 100%;
+  }
+
+  .xl\:h-halfscreen {
+    height: 50vh;
   }
 
   .xl\:h-screen {
