@@ -19,7 +19,10 @@ class Navbar extends Component {
   }
 
   toggleNav = () => {
+    console.log('toggle noa');
     const { navOpen } = this.state;
+    const overFlow = navOpen ? 'auto' : 'hidden';
+    document.body.style.overflow = overFlow;
     this.setState({ navOpen: !navOpen });
   };
 
@@ -39,13 +42,19 @@ class Navbar extends Component {
   render() {
     const { navLinks, navOpen, scrollPosition } = this.state;
     const isNavFixed = scrollPosition > 100;
+    let navTextColour;
+    if (navOpen || isNavFixed) {
+      navTextColour = 'safe-green';
+    } else {
+      navTextColour = 'white';
+    }
     return (
       <React.Fragment>
         <nav
           className={`
        ${scrollPosition > 100 ? 'fixed bg-white' : 'absolute'} w-full z-50 pin-t
       bg-transparent
-      px-12 py-6 mb-6`}
+      px-6 md:px-12 py-6 mb-6`}
         >
           <div className="container mx-auto flex items-center justify-between flex-wrap">
             <Link
@@ -54,11 +63,9 @@ class Navbar extends Component {
               className="flex items-center text-white no-underline cursor-pointer"
             >
               <span
-                className={`text-4xl ${
-                  isNavFixed ? 'text-safe-green' : 'text-white'
-                } font-bold tracking-tight`}
+                className={`text-4xl text-${navTextColour} font-bold tracking-tight`}
               >
-                SAFE
+                GMFH
               </span>
             </Link>
 
@@ -66,27 +73,36 @@ class Navbar extends Component {
               <button
                 style={{ outline: 'none' }}
                 onClick={this.toggleNav}
-                className="
+                className={`
+                text-${navTextColour} border-${navTextColour}
                   flex items-center outline-none
-                  px-3 py-2 border 
-                  rounded text-grey border-grey 
-                  hover:text-white hover:border-white"
+                  px-3 py-2  
+                  rounded`}
                 type="button"
               >
-                <svg
+                {/* <svg
                   className="fill-current h-3 w-3 outline-none"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>Menu</title>
                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
+                </svg> */}
+                <div
+                  className={`hamburger ${
+                    navOpen ? 'is-active' : ''
+                  } text-${navTextColour}`}
+                  id="hamburgerIcon"
+                >
+                  <span className={`line bg-${navTextColour}`} />
+                  <span className={`line bg-${navTextColour}`} />
+                  <span className={`line bg-${navTextColour}`} />
+                </div>
               </button>
             </div>
             <div
-              className={`${
-                navOpen ? '' : 'hide'
-              } w-full hidden md:flex md:items-center md:w-auto`}
+              className="w-full hidden md:flex md:items-center md:w-auto
+              "
             >
               {navLinks
                 ? navLinks.map((item, i) => (
@@ -95,6 +111,7 @@ class Navbar extends Component {
                       closeNav={this.closeNavBar}
                       key={i}
                       isNavFixed={isNavFixed}
+                      isNavOpen={navOpen}
                       external
                     />
                   ))
@@ -102,6 +119,26 @@ class Navbar extends Component {
             </div>
           </div>
         </nav>
+        <div className="overlay-menu" style={{ width: navOpen ? '100%' : '0' }}>
+          <div className="overlay-menu-content">
+            {navLinks
+              ? navLinks.map((item, i) => (
+                  <React.Fragment>
+                    <div className="mt-12">
+                      <NavBarLink
+                        item={item}
+                        closeNav={this.closeNavBar}
+                        key={i}
+                        isNavFixed
+                        isNavOpen={navOpen}
+                        external
+                      />
+                    </div>
+                  </React.Fragment>
+                ))
+              : null}
+          </div>
+        </div>
       </React.Fragment>
     );
   }
