@@ -1,11 +1,12 @@
- @tailwind preflight;
- @tailwind components;
- @tailwind utilities;
- @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
- .home-screen-image {
-   background-image: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('./images/pasta.jpg');
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
- }
+.home-screen-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url('./images/allotments.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

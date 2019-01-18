@@ -8,9 +8,9 @@ class Navbar extends Component {
       { text: 'Home', to: '/', exact: true },
       { text: 'About Us', to: '/about-us' },
       { text: 'Forum', to: 'https://www.discourse.org/', external: true },
-      { text: 'Contact', to: '/contact' },
+      { text: 'Contact', to: '/contact' }
     ],
-    navOpen: false,
+    navOpen: false
   };
 
   toggleNav = () => {
@@ -28,7 +28,7 @@ class Navbar extends Component {
       <React.Fragment>
         <nav
           className=" fixed w-full z-50 pin-t
-      bg-safe-green-darker
+      bg-safe-green-light
       px-12 py-6 mb-6"
         >
           <div className="container mx-auto flex items-center justify-between flex-wrap">
