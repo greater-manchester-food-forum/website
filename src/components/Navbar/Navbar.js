@@ -4,6 +4,7 @@ import NavBarLink from './NavBarLink';
 
 class Navbar extends Component {
   state = {
+    scrollPosition: 0,
     navLinks: [
       { text: 'Home', to: '/', exact: true },
       { text: 'About Us', to: '/about-us' },
@@ -12,6 +13,10 @@ class Navbar extends Component {
     ],
     navOpen: false,
   };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
 
   toggleNav = () => {
     const { navOpen } = this.state;
@@ -22,14 +27,25 @@ class Navbar extends Component {
     this.setState({ navOpen: false });
   };
 
+  handleScroll = () => {
+    const doc = document.documentElement;
+    const scrollTop =
+      (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+
+    const value = document.body.scrollTop;
+    this.setState({ scrollPosition: scrollTop });
+  };
+
   render() {
-    const { navLinks, navOpen } = this.state;
+    const { navLinks, navOpen, scrollPosition } = this.state;
+    const isNavFixed = scrollPosition > 100;
     return (
       <React.Fragment>
         <nav
-          className=" fixed w-full z-50 pin-t
+          className={`
+       ${scrollPosition > 100 ? 'fixed bg-white' : 'absolute'} w-full z-50 pin-t
       bg-transparent
-      px-12 py-6 mb-6"
+      px-12 py-6 mb-6`}
         >
           <div className="container mx-auto flex items-center justify-between flex-wrap">
             <Link
@@ -37,7 +53,13 @@ class Navbar extends Component {
               to="/"
               className="flex items-center text-white no-underline cursor-pointer"
             >
-              <span className="text-4xl font-bold tracking-tight">SAFE</span>
+              <span
+                className={`text-4xl ${
+                  isNavFixed ? 'text-safe-green' : 'text-white'
+                } font-bold tracking-tight`}
+              >
+                SAFE
+              </span>
             </Link>
 
             <div className="block md:hidden outline-none">
@@ -72,6 +94,7 @@ class Navbar extends Component {
                       item={item}
                       closeNav={this.closeNavBar}
                       key={i}
+                      isNavFixed={isNavFixed}
                       external
                     />
                   ))

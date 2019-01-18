@@ -22,7 +22,7 @@ export default class Home extends Component {
           </div>
           <div className="scroll-down" />
         </div>
-        <div className="flex mt-12 w-full">
+        <div className="flex mt-12 w-full h-screen">
           <h2 className="mx-auto text-3xl">Our Mission</h2>
         </div>
       </React.Fragment>
