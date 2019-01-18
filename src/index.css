@@ -7606,13 +7606,23 @@ table {
 }
 
 #hamburgerIcon.is-active .line:nth-child(1) {
-  -webkit-transform: translateY(8px) rotate(45deg);
+  -webkit-transform: translateY(9px) rotate(45deg);
           transform: translateY(9px) rotate(45deg);
 }
 
 #hamburgerIcon.is-active .line:nth-child(3) {
   -webkit-transform: translateY(-9px) rotate(-45deg);
           transform: translateY(-9px) rotate(-45deg);
+}
+
+.navbar-hidden-before-scroll {
+  margin-top: -89px;
+}
+
+.fixed-nav {
+  transition: all .7s ease-in-out;
+  -webkit-transform: translateY(89px);
+          transform: translateY(89px);
 }
 
 @media (min-width: 576px) {

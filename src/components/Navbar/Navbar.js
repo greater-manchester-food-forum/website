@@ -27,6 +27,9 @@ class Navbar extends Component {
   };
 
   closeNavBar = () => {
+    const { navOpen } = this.state;
+    const overFlow = navOpen ? 'auto' : 'hidden';
+    document.body.style.overflow = overFlow;
     this.setState({ navOpen: false });
   };
 
@@ -41,7 +44,7 @@ class Navbar extends Component {
 
   render() {
     const { navLinks, navOpen, scrollPosition } = this.state;
-    const isNavFixed = scrollPosition > 100;
+    const isNavFixed = scrollPosition > 80;
     let navTextColour;
     if (navOpen || isNavFixed) {
       navTextColour = 'safe-green';
@@ -52,7 +55,8 @@ class Navbar extends Component {
       <React.Fragment>
         <nav
           className={`
-       ${scrollPosition > 100 ? 'fixed bg-white' : 'absolute'} w-full z-50 pin-t
+          ${scrollPosition > 75 ? 'navbar-hidden-before-scroll' : ''}
+       ${isNavFixed ? 'fixed bg-white fixed-nav' : 'absolute'} w-full z-50 pin-t
       bg-transparent
       px-6 md:px-12 py-6 mb-6`}
         >
