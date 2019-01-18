@@ -5,6 +5,7 @@ import {
   Switch,
   Redirect,
 } from 'react-router-dom';
+import Navigation from './containers/Navigation/Navigation';
 import Home from './components/Home';
 import Navbar from './components/Navbar/Navbar';
 import AboutUs from './components/AboutUs';
@@ -15,7 +16,7 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
-          <Navbar />
+          <Navigation />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about-us" component={AboutUs} />
