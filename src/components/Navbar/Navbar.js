@@ -8,9 +8,9 @@ class Navbar extends Component {
       { text: 'Home', to: '/', exact: true },
       { text: 'About Us', to: '/about-us' },
       { text: 'Forum', to: 'https://www.discourse.org/', external: true },
-      { text: 'Contact', to: '/contact' }
+      { text: 'Contact', to: '/contact' },
     ],
-    navOpen: false
+    navOpen: false,
   };
 
   toggleNav = () => {
@@ -28,7 +28,7 @@ class Navbar extends Component {
       <React.Fragment>
         <nav
           className=" fixed w-full z-50 pin-t
-      bg-safe-green-light
+      bg-transparent
       px-12 py-6 mb-6"
         >
           <div className="container mx-auto flex items-center justify-between flex-wrap">
@@ -37,7 +37,7 @@ class Navbar extends Component {
               to="/"
               className="flex items-center text-white no-underline cursor-pointer"
             >
-              <span className="text-xl font-bold tracking-tight">SAFE</span>
+              <span className="text-4xl font-bold tracking-tight">SAFE</span>
             </Link>
 
             <div className="block md:hidden outline-none">
@@ -64,7 +64,7 @@ class Navbar extends Component {
             <div
               className={`${
                 navOpen ? '' : 'hide'
-              } w-full block md:flex md:items-center md:w-auto`}
+              } w-full hidden md:flex md:items-center md:w-auto`}
             >
               {navLinks
                 ? navLinks.map((item, i) => (

@@ -7482,10 +7482,79 @@ table {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 .home-screen-image {
-  background-image: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('./images/allotments.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .45)), url('./images/tom.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.btn {
+  font-weight: 700;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn-green {
+  background-color: #258039;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background-color: #217333;
+}
+
+.scroll-down {
+  bottom: 75px;
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  border-bottom: 3.5px solid #fff;
+  border-right: 3.5px solid #fff;
+  z-index: 9;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+          transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 2s ease-in-out infinite;
+          animation: fade_move_down 3s ease-in-out infinite;
+}
+
+/*animated scroll arrow animation*/
+
+@-webkit-keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -7px) rotate(45deg);
+            transform: translate(0, -7px) rotate(45deg);
+  }
+
+  50% {
+    -webkit-transform: translate(0, 7px) rotate(45deg);
+            transform: translate(0, 7px) rotate(45deg);
+  }
+
+  100% {
+    -webkit-transform: translate(0, -7px) rotate(45deg);
+            transform: translate(0, -7px) rotate(45deg);
+  }
 }
 
 @media (min-width: 576px) {
