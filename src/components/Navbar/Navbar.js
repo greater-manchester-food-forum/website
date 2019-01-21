@@ -19,6 +19,7 @@ function Navbar({
   return (
     <React.Fragment>
       <nav
+        id="nav"
         className={`
           ${scrollPosition > 75 ? 'navbar-hidden-before-scroll' : ''}
        ${

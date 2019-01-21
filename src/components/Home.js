@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import homeScreenImage from '../images/pasta.jpg';
+import OurMission from './OurMission/OurMission';
 
 export default class Home extends Component {
+  scrollToMission = () => {
+    const element = document.querySelector('#mission-statement');
+    const navBarHeight = document.querySelector('#nav').clientHeight;
+    console.log(element);
+    console.log(element.getBoundingClientRect().top);
+
+    window.scrollTo(0, element.getBoundingClientRect().top - navBarHeight);
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -20,11 +30,13 @@ export default class Home extends Component {
               Find out more
             </button>
           </div>
-          <div className="scroll-down" />
+          <button
+            className="scroll-down outline-none focus:outline-none active:outline-none"
+            onClick={this.scrollToMission}
+            type="button"
+          />
         </div>
-        <div className="flex mt-12 w-full h-screen">
-          <h2 className="mx-auto text-3xl">Our Mission</h2>
-        </div>
+        <OurMission />
       </React.Fragment>
     );
   }

@@ -47,13 +47,6 @@ export default class Navigation extends Component {
     const { navOpen, navLinks, scrollPosition } = this.state;
     return (
       <React.Fragment>
-        {/* <FixedNavbar
-          scrollPosition={scrollPosition}
-          navLinks={navLinks}
-          navOpen={navOpen}
-          closeNavBar={this.closeNavBar}
-          toggleNav={this.toggleNav}
-        /> */}
         <Navbar
           scrollPosition={scrollPosition}
           navLinks={navLinks}

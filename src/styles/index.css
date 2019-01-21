@@ -134,3 +134,17 @@
   transition: all .7s ease-in-out;
   transform: translateY(-89px);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 30px;
+}
+
+.mission-container {
+  height:300px;
+}
