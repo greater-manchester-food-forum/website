@@ -9,9 +9,13 @@ function OurMission() {
   return (
     <React.Fragment>
       <div className="py-12 container mx-auto" id="mission-statement">
-        <h2 className="text-5xl font-bold tracking-tight leading-tight text-safe-green-darker text-center mb-12">
+        <h2 className="text-5xl font-bold tracking-tight leading-tight text-safe-green-darker text-center">
           Our Mission
         </h2>
+        <p className="text-center mt-4 mb-12 italic">
+          To provide a place to learn, share and collaborate and make Greater
+          Manchester’s food system better.
+        </p>
         <div className="mission-grid px-6 md:px-0">
           <Mission
             title="Collaboration"
