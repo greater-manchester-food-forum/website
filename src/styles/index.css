@@ -1,7 +1,6 @@
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 .home-screen-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.45)),
@@ -141,8 +140,14 @@ html {
 
 .mission-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .mission-grid {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
 }
 
 .mission-container {

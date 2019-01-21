@@ -8,7 +8,7 @@ import localBusiness from '../../images/local-business.jpg';
 function OurMission() {
   return (
     <React.Fragment>
-      <div className="py-20 container mx-auto" id="mission-statement">
+      <div className="py-12 container mx-auto" id="mission-statement">
         <h2 className="text-5xl font-bold tracking-tight leading-tight text-safe-green-darker text-center mb-12">
           Our Mission
         </h2>
@@ -16,7 +16,7 @@ function OurMission() {
           <Mission
             title="Collaboration"
             image={collab}
-            desc="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+            desc="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
           />
           <Mission
             title="Food Access"
@@ -26,7 +26,7 @@ function OurMission() {
           <Mission
             title="Local Business"
             image={localBusiness}
-            desc="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas."
+            desc="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod."
           />
           <Mission
             title="Health"
@@ -34,12 +34,11 @@ function OurMission() {
             desc="Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
           />
         </div>
-        <button
-          className="btn btn-green mt-3 mx-auto text-center"
-          type="button"
-        >
-          Read our full mission statement
-        </button>
+        <div className="text-center mt-6">
+          <button className="btn btn-green" type="button">
+            Read our full mission statement
+          </button>
+        </div>
       </div>
     </React.Fragment>
   );

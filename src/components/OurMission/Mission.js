@@ -14,7 +14,7 @@ export default class Mission extends Component {
   render() {
     const { backgroundShown } = this.state;
     const { title, image, desc } = this.props;
-    const bgPosition = backgroundShown ? 'center' : '-700px';
+    const bgPosition = backgroundShown ? 'center' : '-2000px';
     const textColour = backgroundShown ? 'text-white' : 'text-safe-green';
     return (
       <div
