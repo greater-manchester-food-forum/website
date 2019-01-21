@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 export default class Mission extends Component {
   state = {
-    backgroundShown: false,
+    backgroundShown: true,
   };
 
   toggleBackground = shown => {
