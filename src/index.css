@@ -7625,6 +7625,12 @@ table {
           transform: translateY(89px);
 }
 
+.close-fixed-nav {
+  transition: all .7s ease-in-out;
+  -webkit-transform: translateY(-89px);
+          transform: translateY(-89px);
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;

@@ -130,4 +130,7 @@
   transform: translateY(89px);
 }
 
-
+.close-fixed-nav {
+  transition: all .7s ease-in-out;
+  transform: translateY(-89px);
+}

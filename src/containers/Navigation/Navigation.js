@@ -58,7 +58,7 @@ export default class Navigation extends Component {
           scrollPosition={scrollPosition}
           navLinks={navLinks}
           navOpen={navOpen}
-          isNavFixed={scrollPosition > 80}
+          isNavFixed={scrollPosition > 89}
           closeNavBar={this.closeNavBar}
           toggleNav={this.toggleNav}
         />
