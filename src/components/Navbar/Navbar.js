@@ -71,7 +71,6 @@ function Navbar({
                     key={i}
                     isNavFixed={isNavFixed}
                     isNavOpen={navOpen}
-                    external
                   />
                 ))
               : null}

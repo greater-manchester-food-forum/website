@@ -12,7 +12,7 @@ function OurMission() {
         <h2 className="text-5xl font-bold tracking-tight leading-tight text-safe-green-darker text-center">
           Our Mission
         </h2>
-        <p className="text-center mt-4 mb-12 italic">
+        <p className="text-center mt-4 mb-12 italic text-grey-darkest">
           To provide a place to learn, share and collaborate and make Greater
           Manchester’s food system better.
         </p>

@@ -3,22 +3,34 @@ import { NavLink } from 'react-router-dom';
 
 const NavBarLink = props => {
   const {
-    item: { text, to, exact },
-    external,
+    item: { text, to, exact, external },
     isNavFixed,
   } = props;
+  console.log(text, external);
+  const classNames = `nav-item
+  ${isNavFixed ? 'text-safe-green' : 'text-white'}
+  block mt-4 mr-4 md:mt-0
+  font-medium no-underline`;
+  if (!external)
+    return (
+      <NavLink
+        exact={exact}
+        onClick={() => props.closeNav()}
+        to={to}
+        className={classNames}
+      >
+        {text}
+      </NavLink>
+    );
+
   return (
-    <NavLink
-      exact={exact}
-      onClick={() => props.closeNav()}
-      to={to}
-      className={`nav-item
-      ${isNavFixed ? 'text-safe-green' : 'text-white'}
-      block mt-4 mr-4 md:mt-0
-      font-medium no-underline`}
+    <a
+      target="_blank"
+      className={classNames}
+      href="https://foodhubgm.trydiscourse.com/"
     >
       {text}
-    </NavLink>
+    </a>
   );
 };
 

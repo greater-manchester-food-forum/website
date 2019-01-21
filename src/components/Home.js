@@ -6,10 +6,10 @@ export default class Home extends Component {
   scrollToMission = () => {
     const element = document.querySelector('#mission-statement');
     const navBarHeight = document.querySelector('#nav').clientHeight;
-    console.log(element);
-    console.log(element.getBoundingClientRect().top);
-
-    window.scrollTo(0, element.getBoundingClientRect().top - navBarHeight);
+    window.scrollTo(
+      0,
+      window.pageYOffset + element.getBoundingClientRect().top - navBarHeight
+    );
   };
 
   render() {

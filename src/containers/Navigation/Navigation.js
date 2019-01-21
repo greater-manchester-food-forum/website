@@ -7,10 +7,10 @@ export default class Navigation extends Component {
   state = {
     scrollPosition: 0,
     navLinks: [
-      { text: 'Home', to: '/', exact: true },
-      { text: 'About Us', to: '/about-us' },
+      { text: 'Home', to: '/', exact: true, external: false },
+      { text: 'About Us', to: '/about-us', external: false },
       { text: 'Forum', to: 'https://www.discourse.org/', external: true },
-      { text: 'Contact', to: '/contact' },
+      { text: 'Contact', to: '/contact', external: false },
     ],
     navOpen: false,
   };
