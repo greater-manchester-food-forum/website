@@ -2,11 +2,30 @@ import React, { Component, Fragment } from 'react';
 import image from '../images/market.jpg';
 import Header from './Header';
 import quote from '../images/quote.png';
-import logo from '../images/logo.png';
+import feedingGM from '../images/feeding-gm.png';
+import goodGM from '../images/good-food-for-gm.png';
+import GMCA from '../images/gcma.png';
+import realFoodGuide from '../images/real-food-guide.png';
+import openKitch from '../images/open-kitch.png';
+import kindTrust from '../images/kind-trust.png';
+import emerge from '../images/emerge-logo.png';
 import Collaborators from './Collaborators';
 
 export default class AboutUs extends Component {
+  state = {
+    collaborators: [
+      { name: 'Feeding GM', logo: feedingGM },
+      { name: 'Good Food For GM', logo: goodGM },
+      { name: 'GMCA’s Health Hub', logo: GMCA },
+      { name: 'Friends of the Earth', logo: realFoodGuide },
+      { name: 'Real Junk Food Mcr', logo: openKitch },
+      { name: 'Kindling Trust', logo: kindTrust },
+      { name: 'FareShare GM', logo: emerge },
+    ],
+  };
+
   render() {
+    const { collaborators } = this.state;
     return (
       <Fragment>
         <Header image={image} title="About Us" />
@@ -40,12 +59,9 @@ export default class AboutUs extends Component {
           <h1 className="mt-8 text-safe-green">
             Collaborators
             <div className="collaborators-grid mt-4">
-              <Collaborators name="Collab 1" logo={logo} />
-              <Collaborators name="Collab 2" logo={logo} />
-              <Collaborators name="Collab 3" logo={logo} />
-              <Collaborators name="Collab 4" logo={logo} />
-              <Collaborators name="Collab 5" logo={logo} />
-              <Collaborators name="Collab 6" logo={logo} />
+              {collaborators.map(c => (
+                <Collaborators name={c.name} logo={c.logo} />
+              ))}
             </div>
           </h1>
         </div>
