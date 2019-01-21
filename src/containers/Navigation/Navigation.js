@@ -22,15 +22,14 @@ export default class Navigation extends Component {
   toggleNav = () => {
     console.log('toggle noa');
     const { navOpen } = this.state;
-    const overFlow = navOpen ? 'auto' : 'hidden';
-    document.body.style.overflow = overFlow;
+    document.body.style.overflow = 'hidden';
     this.setState({ navOpen: !navOpen });
   };
 
   closeNavBar = () => {
     const { navOpen } = this.state;
-    const overFlow = navOpen ? 'auto' : 'hidden';
-    document.body.style.overflow = overFlow;
+    if (!navOpen) return;
+    document.body.style.overflow = 'auto';
     this.setState({ navOpen: false });
   };
 
