@@ -1,12 +1,12 @@
 import React from 'react';
 import Home from '../components/Home';
-import OurMission from '../components/OurMission/OurMission';
+import MissionSummary from '../components/OurMission/MissionSummary';
 
 export default function Landing() {
   return (
     <React.Fragment>
       <Home />
-      <OurMission />
+      <MissionSummary />
     </React.Fragment>
   );
 }

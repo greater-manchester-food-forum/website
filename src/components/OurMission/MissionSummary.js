@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Mission from './Mission';
 import collab from '../../images/collaboration.jpg';
 import foodAccess from '../../images/food-access.jpg';
 import healthyFood from '../../images/healthy-food.jpg';
 import localBusiness from '../../images/local-business.jpg';
 
-function OurMission() {
+function MissionSummary() {
   return (
     <React.Fragment>
       <div className="py-12 container mx-auto" id="mission-statement">
@@ -39,13 +40,13 @@ function OurMission() {
           />
         </div>
         <div className="text-center mt-6">
-          <button className="btn btn-green" type="button">
+          <Link to="/about-us" className="btn btn-green no-underline">
             Read our full mission statement
-          </button>
+          </Link>
         </div>
       </div>
     </React.Fragment>
   );
 }
 
-export default OurMission;
+export default MissionSummary;

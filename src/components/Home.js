@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import homeScreenImage from '../images/pasta.jpg';
-import OurMission from './OurMission/OurMission';
+import MissionSummary from './OurMission/MissionSummary';
 
 export default class Home extends Component {
   scrollToMission = () => {
@@ -26,9 +25,12 @@ export default class Home extends Component {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip exe ea commodo consequat.
             </p>
-            <button className="btn btn-green mt-3" type="button">
-              Find out more
-            </button>
+            <a
+              href="https://foodhubgm.trydiscourse.com/"
+              className="btn btn-green mt-3 no-underline"
+            >
+              Visit the Forum
+            </a>
           </div>
           <button
             className="scroll-down outline-none focus:outline-none active:outline-none"
@@ -36,7 +38,7 @@ export default class Home extends Component {
             type="button"
           />
         </div>
-        <OurMission />
+        <MissionSummary />
       </React.Fragment>
     );
   }

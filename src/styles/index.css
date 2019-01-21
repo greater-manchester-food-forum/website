@@ -136,6 +136,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 .mission-grid {
@@ -152,4 +153,14 @@ html {
 
 .mission-container {
   height:275px;
+}
+
+.hide-background-image {
+  background-position: -2000px;
+}
+
+.collaborators-grid {
+  display: grid;
+  grid-gap:20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }

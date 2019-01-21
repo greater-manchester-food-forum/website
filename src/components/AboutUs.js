@@ -1,32 +1,18 @@
 import React, { Component, Fragment } from 'react';
 import image from '../images/market.jpg';
-import OurMission from './OurMission/OurMission';
+import Header from './Header';
+import quote from '../images/quote.png';
+import logo from '../images/logo.png';
+import Collaborators from './Collaborators';
 
 export default class AboutUs extends Component {
   render() {
     return (
       <Fragment>
-        <div
-          className="h-64 flex items-center bg-center bg-cover"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image})`,
-          }}
-        >
-          <div className="mx-auto">
-            <h1
-              className="text-white text-5xl font-bold tracking-tight leading-tight mb-3 text-center"
-              style={{ marginTop: '89px' }}
-            >
-              About Us
-            </h1>
-          </div>
-        </div>
-
-        <div className="py-16 container mx-auto">
-          <div className=" w-1/2">
-            <h2 className="pb-4 text-safe-green font-bold tracking-tight leading-tight">
-              Mission Statement
-            </h2>
+        <Header image={image} title="About Us" />
+        <div className="py-12 container mx-auto">
+          <div className="text-center">
+            <img src={quote} className="h-16 text-center mb-4" />
             <p>
               As growing numbers of us are realising, food is vital in so many
               ways: not just in nourishing our bodies and communities, but as a
@@ -46,7 +32,22 @@ export default class AboutUs extends Component {
               happening here will shape what this online hub can do in future.
               Join the conversation and share your ideas!
             </p>
+            <h2 className="pb-4 text-xl pt-4 text-safe-green font-bold tracking-tight leading-tight">
+              Greater Manchester Food Hub - 2019 Mission Statement
+            </h2>
           </div>
+          {/* <div className="">Location: Manchester</div> */}
+          <h1 className="mt-8 text-safe-green">
+            Collaborators
+            <div className="collaborators-grid mt-4">
+              <Collaborators name="Collab 1" logo={logo} />
+              <Collaborators name="Collab 2" logo={logo} />
+              <Collaborators name="Collab 3" logo={logo} />
+              <Collaborators name="Collab 4" logo={logo} />
+              <Collaborators name="Collab 5" logo={logo} />
+              <Collaborators name="Collab 6" logo={logo} />
+            </div>
+          </h1>
         </div>
       </Fragment>
     );

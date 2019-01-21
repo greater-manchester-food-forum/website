@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FixedNavbar from '../../components/Navbar/FixedNavbar';
 import Navbar from '../../components/Navbar/Navbar';
 import MobileNavbar from '../../components/Navbar/MobileNavbar';
 
