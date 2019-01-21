@@ -20,9 +20,9 @@ export default class Navigation extends Component {
   }
 
   toggleNav = () => {
-    console.log('toggle noa');
     const { navOpen } = this.state;
-    document.body.style.overflow = 'hidden';
+    const overFlow = navOpen ? 'auto' : 'hidden';
+    document.body.style.overflow = overFlow;
     this.setState({ navOpen: !navOpen });
   };
 
@@ -37,8 +37,6 @@ export default class Navigation extends Component {
     const doc = document.documentElement;
     const scrollTop =
       (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-
-    const value = document.body.scrollTop;
     this.setState({ scrollPosition: scrollTop });
   };
 
