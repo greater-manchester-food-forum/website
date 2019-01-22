@@ -24,7 +24,7 @@ const NavBarLink = props => {
 
   return (
     <a
-      target="_blank"
+      rel="noopener noreferrer"
       className={classNames}
       href="https://foodhubgm.trydiscourse.com/"
     >
