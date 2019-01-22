@@ -13,10 +13,15 @@ function MissionSummary() {
         <h2 className="text-5xl font-bold tracking-tight leading-tight text-safe-green-darker text-center">
           Our Mission
         </h2>
-        <p className="text-center mt-4 mb-12 italic text-grey-darkest">
+        <p className="text-center mt-4 mb-8 italic text-grey-darkest">
           To provide a place to learn, share and collaborate and make Greater
           Manchester’s food system better.
         </p>
+        <div className="text-center mb-12">
+          <Link to="/about-us" className="bg-grey-lightest hover:bg-grey-light text-safe-green-dark btn no-underline border border-grey">
+            Read the full mission statement
+          </Link>
+        </div>
         <div className="mission-grid px-6 md:px-0">
           <Mission
             title="Collaboration"
@@ -38,11 +43,6 @@ function MissionSummary() {
             image={healthyFood}
             desc="Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
           />
-        </div>
-        <div className="text-center mt-6">
-          <Link to="/about-us" className="btn btn-green no-underline">
-            Read our full mission statement
-          </Link>
         </div>
       </div>
     </React.Fragment>
