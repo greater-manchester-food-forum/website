@@ -7661,6 +7661,18 @@ html {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
+.greater-manchester {
+  font-weight: 200;
+  font-variant: petite-caps;
+  letter-spacing: 2px;
+  font-size: small;
+}
+
+.food-forum {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
