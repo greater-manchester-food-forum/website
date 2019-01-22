@@ -29,9 +29,13 @@ export default class AboutUs extends Component {
     return (
       <Fragment>
         <Header image={image} title="About Us" />
-        <div className="py-12 container mx-auto">
+        <div className="py-12 container mx-auto p-4 md:p-0">
           <div className="text-center">
-            <img src={quote} className="h-16 text-center mb-4" />
+            <img
+              src={quote}
+              alt="quotation-marks"
+              className="h-16 text-center mb-4 mt-8"
+            />
             <p>
               As growing numbers of us are realising, food is vital in so many
               ways: not just in nourishing our bodies and communities, but as a
@@ -55,8 +59,7 @@ export default class AboutUs extends Component {
               Greater Manchester Food Hub - 2019 Mission Statement
             </h2>
           </div>
-          {/* <div className="">Location: Manchester</div> */}
-          <h1 className="mt-8 text-safe-green">
+          <h1 className="my-8 text-safe-green">
             Collaborators
             <div className="collaborators-grid mt-4">
               {collaborators.map(c => (

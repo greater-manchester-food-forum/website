@@ -15,7 +15,7 @@ export default class Home extends Component {
     return (
       <React.Fragment>
         <div className="py-8 h-screen home-screen-image flex items-center">
-          <div className=" container mx-auto text-white w-1/2 flex flex-col p-6 justify-center items-center">
+          <div className=" container mx-auto text-white w-1/2 flex flex-col p-4 md:p-0 justify-center items-center">
             <h1 className="text-5xl font-bold tracking-tight leading-tight mb-3 text-center">
               Join the Conversation
             </h1>
