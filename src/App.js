@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Switch,
   Redirect,
@@ -10,19 +10,22 @@ import Home from './components/Home';
 import Navbar from './components/Navbar/Navbar';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
+import ActionPlans from './components/ActionPlans';
+import ScrollTop from './components/ScrollTop';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <React.Fragment>
+        <ScrollTop>
           <Navigation />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about-us" component={AboutUs} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/action-plans" component={ActionPlans} />
           </Switch>
-        </React.Fragment>
+        </ScrollTop>
       </Router>
     );
   }

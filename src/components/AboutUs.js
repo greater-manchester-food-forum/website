@@ -24,16 +24,12 @@ export default class AboutUs extends Component {
     ],
   };
 
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
-
   render() {
     const { collaborators } = this.state;
     return (
       <Fragment>
         <Header image={image} title="About Us" />
-        <div className="py-12 container mx-auto p-4 md:p-0">
+        <div className="py-4 container mx-auto">
           <div className="text-center">
             <img
               src={quote}
@@ -66,8 +62,8 @@ export default class AboutUs extends Component {
           <h1 className="my-8 text-safe-green">
             Collaborators
             <div className="collaborators-grid mt-4">
-              {collaborators.map(c => (
-                <Collaborators name={c.name} logo={c.logo} />
+              {collaborators.map((c, i) => (
+                <Collaborators key={i} name={c.name} logo={c.logo} />
               ))}
             </div>
           </h1>

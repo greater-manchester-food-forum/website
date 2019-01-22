@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import MissionSummary from './OurMission/MissionSummary';
 
 export default class Home extends Component {
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
-
   scrollToMission = () => {
     const element = document.querySelector('#mission-statement');
     const navBarHeight = document.querySelector('#nav').clientHeight;

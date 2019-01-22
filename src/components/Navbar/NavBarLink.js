@@ -6,7 +6,6 @@ const NavBarLink = props => {
     item: { text, to, exact, external },
     isNavFixed,
   } = props;
-  console.log(text, external);
   const classNames = `nav-item
   ${isNavFixed ? 'text-safe-green' : 'text-white'}
   block mt-4 mr-4 md:mt-0
