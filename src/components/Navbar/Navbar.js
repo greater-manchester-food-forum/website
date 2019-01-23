@@ -4,10 +4,6 @@ import classNames from 'classnames';
 import NavBarLink from './NavBarLink';
 import gmffLogoWhite from '../../images/logo-white.png';
 import gmffLogoGreen from '../../images/logo-green.png';
-import gmffLogoBlue from '../../images/gmff-logo-blue.png';
-import gmffLogoOutline from '../../images/gmff-logo-outline.png';
-import bee from '../../images/bee.png';
-import potentialLogo from '../../images/potential-logo.png';
 
 function Navbar({
   scrollPosition,
