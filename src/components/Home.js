@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Collaborators from './Collaborators';
-import tomSmall from '../images/tom-small.jpg';
 import tom from '../images/tom.jpg';
 import feedingGM from '../images/feeding-gm.png';
 import goodGM from '../images/good-food-for-gm.png';
-import GMCA from '../images/gcma.png';
-import realFoodGuide from '../images/real-food-guide.png';
-import openKitch from '../images/open-kitch.png';
 import kindTrust from '../images/kind-trust.png';
-import emerge from '../images/emerge-logo.png';
 
 class Home extends Component {
   state = {
     collaborators: [
-      { name: 'Feeding GM', logo: feedingGM },
-      { name: 'Good Food For GM', logo: goodGM },
+      {
+        name: 'Feeding GM',
+        logo: feedingGM,
+        url: 'https://feedinggtrmcr.org.uk/',
+      },
+      {
+        name: 'Good Food For GM',
+        logo: goodGM,
+        url: 'https://goodfoodgreaterman.wixsite.com/home',
+      },
       // { name: 'GMCA’s Health Hub', logo: GMCA },
       // { name: 'Friends of the Earth', logo: realFoodGuide },
       // { name: 'Real Junk Food Mcr', logo: openKitch },
-      { name: 'Kindling Trust', logo: kindTrust },
+      {
+        name: 'Kindling Trust',
+        logo: kindTrust,
+        url: 'https://kindling.org.uk/',
+      },
       // { name: 'FareShare GM', logo: emerge },
     ],
   };
@@ -51,16 +58,16 @@ class Home extends Component {
               To provide a place to learn, share and collaborate and make
               Greater Manchester’s food system better.
             </p>
-            <div className="md:flex">
+            <div className="text-center md:flex">
               <Link
                 to="/about-us"
-                className="btn btn-white mt-5 no-underline block mb-6 md:mb-0"
+                className="btn btn-white mt-5 no-underline block mb-6 md:mb-0 block"
               >
                 Mission Statement
               </Link>
               <a
                 href="https://foodhubgm.trydiscourse.com/"
-                className="btn btn-green mt-5 no-underline ml-4"
+                className="btn btn-green mt-5 no-underline md:ml-4 block"
               >
                 Visit the Forum
               </a>
@@ -79,9 +86,9 @@ class Home extends Component {
           <p className="text-center mb-8 italic text-grey-darkest">
             The main organisations involved in this process.
           </p>
-          <div className="collaborators-grid mt-4">
+          <div className="collaborators-grid mt-4 px-4 md:px-0">
             {collaborators.map((c, i) => (
-              <Collaborators key={i} name={c.name} logo={c.logo} />
+              <Collaborators key={i} name={c.name} logo={c.logo} url={c.url} />
             ))}
           </div>
         </div>

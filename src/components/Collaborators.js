@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Collaborators({ logo, name }) {
+function Collaborators({ logo, name, url }) {
   return (
     <div className="shadow-md bg-white text-grey-darkest text-xl flex items-center px-6 py-12 mb-6">
       <img src={logo} alt="logo" className="h-24 mr-4" />
@@ -12,9 +12,9 @@ function Collaborators({ logo, name }) {
           collaborator description, I describe the collaborator.
         </p>
       </div>
-      <button className="btn btn-green text-sm ml-auto" type="button">
+      <a href={url} className="btn btn-green text-sm ml-auto no-underline">
         Visit
-      </button>
+      </a>
     </div>
   );
 }

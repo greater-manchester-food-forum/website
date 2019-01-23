@@ -12,6 +12,7 @@ import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import ActionPlans from './components/ActionPlans';
 import ScrollTop from './components/ScrollTop';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/action-plans" component={ActionPlans} />
           </Switch>
+          <Footer />
         </ScrollTop>
       </Router>
     );
