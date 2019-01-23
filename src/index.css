@@ -7481,7 +7481,6 @@ table {
 }
 
 .home-screen-image {
-  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .45)), url('./images/tom.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -7502,6 +7501,11 @@ table {
 
 .btn-green:hover {
   background-color: #217333;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #258039;
 }
 
 .scroll-down {
@@ -7655,11 +7659,11 @@ html {
   background-position: -2000px;
 }
 
-.collaborators-grid {
+/* .collaborators-grid {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
+  grid-gap:20px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+} */
 
 .greater-manchester {
   font-weight: 200;

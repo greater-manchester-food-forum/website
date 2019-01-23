@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 .home-screen-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.45)),
-    url('./images/tom.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,6 +16,11 @@
 }
 .btn-green:hover {
   @apply bg-safe-green-dark;
+}
+
+.btn-white {
+  @apply bg-white;
+  @apply text-safe-green;
 }
 
 .scroll-down {
@@ -159,11 +162,11 @@ html {
   background-position: -2000px;
 }
 
-.collaborators-grid {
+/* .collaborators-grid {
   display: grid;
   grid-gap:20px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+} */
 
 .greater-manchester {
   font-weight: 200;
