@@ -87,10 +87,13 @@ export default class AboutUs extends Component {
               Visit the Forum
             </a>
           </div>
-          <h1 className="my-8 text-safe-green">Our Mission</h1>
-          <MissionSummary />
-          <h1 className="my-8 text-safe-green mt-12">All Collaborators</h1>
-          <div className="collaborators-grid mt-4">
+          <div className="px-4 px-0">
+            <h1 className="my-8 text-safe-green">Our Mission</h1>
+            <MissionSummary />
+          </div>
+
+          <div className="collaborators-grid mt-4 px-4 md:px-0">
+            <h1 className="my-8 text-safe-green mt-12">All Collaborators</h1>
             {collaborators.map((c, i) => (
               <Collaborators key={i} name={c.name} logo={c.logo} url={c.url} />
             ))}

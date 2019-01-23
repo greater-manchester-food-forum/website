@@ -15,6 +15,7 @@ function Navbar({
 }) {
   let navTextColour;
   let logo;
+  let shadow;
   if (navOpen || isNavFixed) {
     navTextColour = 'safe-green';
     logo = gmffLogoGreen;
@@ -32,7 +33,7 @@ function Navbar({
             'navbar-hidden-before-scroll': scrollPosition > 75,
             'fixed bg-white fixed-nav': isNavFixed,
             absolute: !isNavFixed,
-          })} w-full z-50 pin-t bg-transparent px-6 md:px-12 py-6 mb-6`}
+          })} w-full z-50 pin-t bg-transparent px-6 md:px-12 py-6 mb-6 ${shadow}`}
       >
         <div className="container mx-auto flex items-center justify-between flex-wrap">
           <Link

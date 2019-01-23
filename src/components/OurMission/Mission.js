@@ -35,7 +35,7 @@ export default class Mission extends Component {
     const textColour = backgroundShown ? 'text-white' : 'text-safe-green';
     return (
       <div
-        className={`flex flex-col justify-between border border-grey px-4 py-8 md:px-12 md:py-16 mission-container bg-no-repeat bg-cover ${textColour}`}
+        className={`flex flex-col justify-between bg-white border border-grey px-4 py-8 md:px-12 md:py-16 mission-container bg-no-repeat bg-cover ${textColour}`}
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${image})`,
           backgroundPosition: bgPosition,
