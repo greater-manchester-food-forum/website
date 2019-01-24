@@ -4,7 +4,7 @@ import Collaborator from './Collaborator';
 import homeScreenImage from '../images/tom.jpg';
 import collaborators from '../collaborators';
 
-export default function Home() {
+function Home() {
   const scrollToCollaborators = () => {
     const element = document.querySelector('#collaborators');
     const navBarHeight = document.querySelector('#nav').clientHeight;
@@ -68,3 +68,5 @@ export default function Home() {
     </React.Fragment>
   );
 }
+
+export default Home;
