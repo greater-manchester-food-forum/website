@@ -7622,19 +7622,13 @@ table {
 }
 
 .navbar-hidden-before-scroll {
-  margin-top: -89px;
+  /* margin-top:-89px; */
+  top: -89px;
 }
 
 .fixed-nav {
-  transition: all .7s ease-in-out;
-  -webkit-transform: translateY(89px);
-          transform: translateY(89px);
-}
-
-.close-fixed-nav {
-  transition: all .7s ease-in-out;
-  -webkit-transform: translateY(-89px);
-          transform: translateY(-89px);
+  top: 0;
+  transition: top .7s;
 }
 
 html {
