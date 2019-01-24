@@ -10,26 +10,25 @@ const NavBarLink = props => {
   ${isNavFixed ? 'text-safe-green' : 'text-white'}
   block mt-4 mr-4 md:mt-0
   font-medium no-underline`;
-  if (!external)
+  if (external)
     return (
-      <NavLink
-        exact={exact}
-        onClick={() => props.closeNav()}
-        to={to}
+      <a
+        rel="noopener noreferrer"
         className={classNames}
+        href="https://foodhubgm.trydiscourse.com/"
       >
         {text}
-      </NavLink>
+      </a>
     );
-
   return (
-    <a
-      rel="noopener noreferrer"
+    <NavLink
+      exact={exact}
+      onClick={() => props.closeNav()}
+      to={to}
       className={classNames}
-      href="https://foodhubgm.trydiscourse.com/"
     >
       {text}
-    </a>
+    </NavLink>
   );
 };
 

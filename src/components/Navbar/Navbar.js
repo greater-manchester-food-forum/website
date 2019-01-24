@@ -15,7 +15,6 @@ function Navbar({
 }) {
   let navTextColour;
   let logo;
-  let shadow;
   if (navOpen || isNavFixed) {
     navTextColour = 'safe-green';
     logo = gmffLogoGreen;
@@ -31,9 +30,9 @@ function Navbar({
         className={`
           ${classNames({
             'navbar-hidden-before-scroll': scrollPosition > 75,
-            'fixed bg-white fixed-nav': isNavFixed,
+            'fixed bg-white fixed-nav shadow': isNavFixed,
             absolute: !isNavFixed,
-          })} w-full z-50 pin-t bg-transparent px-6 md:px-12 py-6 mb-6 ${shadow}`}
+          })} w-full z-50 pin-t bg-transparent px-6 md:px-12 py-6 mb-6`}
       >
         <div className="container mx-auto flex items-center justify-between flex-wrap">
           <Link
@@ -58,7 +57,6 @@ function Navbar({
 
           <div className="block md:hidden outline-none">
             <button
-              style={{ outline: 'none' }}
               onClick={toggleNav}
               className={`
                 text-${navTextColour} border-${navTextColour}
@@ -80,17 +78,16 @@ function Navbar({
             </button>
           </div>
           <div className="w-full hidden md:flex md:items-center md:w-auto">
-            {navLinks
-              ? navLinks.map((item, i) => (
-                  <NavBarLink
-                    item={item}
-                    closeNav={closeNavBar}
-                    key={i}
-                    isNavFixed={isNavFixed}
-                    isNavOpen={navOpen}
-                  />
-                ))
-              : null}
+            {navLinks &&
+              navLinks.map((item, i) => (
+                <NavBarLink
+                  item={item}
+                  closeNav={closeNavBar}
+                  key={i}
+                  isNavFixed={isNavFixed}
+                  isNavOpen={navOpen}
+                />
+              ))}
           </div>
         </div>
       </nav>

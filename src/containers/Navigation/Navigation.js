@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { basename } from 'path';
 import Navbar from '../../components/Navbar/Navbar';
 import MobileNavbar from '../../components/Navbar/MobileNavbar';
 
@@ -22,14 +21,13 @@ export default class Navigation extends Component {
     const { navOpen } = this.state;
     const overFlow = navOpen ? 'auto' : 'hidden';
     document.body.style.overflow = overFlow;
-    console.log('Overflow: ', overFlow);
     this.setState({ navOpen: !navOpen });
   };
 
   closeNavBar = () => {
     const { navOpen } = this.state;
     if (!navOpen) return;
-    document.body.style.overflow = 'auto';
+    // document.body.style.overflow = 'auto';
     this.setState({ navOpen: false });
   };
 

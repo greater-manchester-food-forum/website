@@ -1,5 +1,7 @@
 import React from 'react';
 
+const navBarHeight = '89px';
+
 export default function Header({ image, title }) {
   return (
     <div
@@ -11,7 +13,7 @@ export default function Header({ image, title }) {
       <div className="mx-auto">
         <h1
           className="text-white text-5xl font-bold tracking-tight leading-tight mb-3 text-center"
-          style={{ marginTop: '89px' }}
+          style={{ marginTop: navBarHeight }}
         >
           {title}
         </h1>

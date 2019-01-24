@@ -2,7 +2,7 @@ import React from 'react';
 import Home from '../components/Home';
 import MissionSummary from '../components/OurMission/MissionSummary';
 
-export default function Landing() {
+function Landing() {
   return (
     <React.Fragment>
       <Home />
@@ -10,3 +10,5 @@ export default function Landing() {
     </React.Fragment>
   );
 }
+
+export default Landing;

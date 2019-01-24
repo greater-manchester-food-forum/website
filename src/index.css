@@ -7594,7 +7594,6 @@ table {
 .hamburger .line {
   width: 30px;
   height: 3px;
-  /* background-color: #ecf0f1; */
   display: block;
   margin: 6px auto;
   transition: all .3s ease-in-out;
@@ -7658,12 +7657,6 @@ html {
 .hide-background-image {
   background-position: -2000px;
 }
-
-/* .collaborators-grid {
-  display: grid;
-  grid-gap:20px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-} */
 
 .greater-manchester {
   font-weight: 200;

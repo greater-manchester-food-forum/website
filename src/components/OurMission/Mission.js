@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
-export default class Mission extends Component {
+const mediumScreenMinWidth = 992;
+
+class Mission extends Component {
   state = {
     backgroundShown: false,
   };
 
   componentWillMount() {
-    if (window.innerWidth < 992) this.setState({ backgroundShown: true });
+    if (window.innerWidth < mediumScreenMinWidth)
+      this.setState({ backgroundShown: true });
   }
 
   componentDidMount() {
@@ -19,23 +22,25 @@ export default class Mission extends Component {
   }
 
   toggleBackground = shown => {
-    if (window.innerWidth < 992) return;
+    if (window.innerWidth < mediumScreenMinWidth) return;
     this.setState({ backgroundShown: shown });
   };
 
   updateDimensions = () => {
-    const bgAlwaysShown = window.innerWidth < 992;
+    const bgAlwaysShown = window.innerWidth < mediumScreenMinWidth;
     this.setState({ backgroundShown: bgAlwaysShown });
   };
 
   render() {
     const { backgroundShown, windowWidth } = this.state;
     const { title, image, desc } = this.props;
-    const bgPosition = backgroundShown ? 'center' : '-2000px';
+    const bgPositionInvisibleToUser = '-2000px';
+    const bgPosition = backgroundShown ? 'center' : bgPositionInvisibleToUser;
     const textColour = backgroundShown ? 'text-white' : 'text-safe-green';
     return (
       <div
-        className={`flex flex-col justify-between bg-white border border-grey px-4 py-8 md:px-12 md:py-16 mission-container bg-no-repeat bg-cover ${textColour}`}
+        className={`flex flex-col justify-between bg-white border border-grey px-4 py-8 md:px-12 md:py-16 
+        mission-container bg-no-repeat bg-cover ${textColour}`}
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${image})`,
           backgroundPosition: bgPosition,
@@ -59,3 +64,5 @@ export default class Mission extends Component {
     );
   }
 }
+
+export default Mission;

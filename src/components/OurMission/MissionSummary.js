@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Mission from './Mission';
 import collab from '../../images/collaboration.jpg';
 import foodAccess from '../../images/food-access.jpg';
@@ -10,11 +9,6 @@ function MissionSummary() {
   return (
     <React.Fragment>
       <div className="container mx-auto" id="mission-statement">
-        {/* <div className="text-center mb-12">
-          <Link to="/about-us" className="bg-grey-lightest hover:bg-grey-light text-safe-green-dark btn no-underline border border-grey">
-            Read the full mission statement
-          </Link>
-        </div> */}
         <div className="mission-grid px-6 md:px-0">
           <Mission
             title="Collaboration"
