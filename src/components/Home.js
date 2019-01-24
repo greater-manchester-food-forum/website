@@ -1,36 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Collaborators from './Collaborators';
+import Collaborator from './Collaborator';
 import tom from '../images/tom.jpg';
-import feedingGM from '../images/feeding-gm.png';
-import goodGM from '../images/good-food-for-gm.png';
-import kindTrust from '../images/kind-trust.png';
+import collaborators from '../collaborators';
 
 class Home extends Component {
-  state = {
-    collaborators: [
-      {
-        name: 'Feeding GM',
-        logo: feedingGM,
-        url: 'https://feedinggtrmcr.org.uk/',
-      },
-      {
-        name: 'Good Food For GM',
-        logo: goodGM,
-        url: 'https://goodfoodgreaterman.wixsite.com/home',
-      },
-      // { name: 'GMCA’s Health Hub', logo: GMCA },
-      // { name: 'Friends of the Earth', logo: realFoodGuide },
-      // { name: 'Real Junk Food Mcr', logo: openKitch },
-      {
-        name: 'Kindling Trust',
-        logo: kindTrust,
-        url: 'https://kindling.org.uk/',
-      },
-      // { name: 'FareShare GM', logo: emerge },
-    ],
-  };
-
   scrollToCollaborators = () => {
     const element = document.querySelector('#collaborators');
     const navBarHeight = document.querySelector('#nav').clientHeight;
@@ -41,7 +15,6 @@ class Home extends Component {
   };
 
   render() {
-    const { collaborators } = this.state;
     return (
       <React.Fragment>
         <div
@@ -87,9 +60,11 @@ class Home extends Component {
             The main organisations involved in this process.
           </p>
           <div className="collaborators-grid mt-4 px-4 md:px-0">
-            {collaborators.map((c, i) => (
-              <Collaborators key={i} name={c.name} logo={c.logo} url={c.url} />
-            ))}
+            {collaborators
+              .filter(c => c.mainCollaborator === true)
+              .map((c, i) => (
+                <Collaborator key={i} name={c.name} logo={c.logo} url={c.url} />
+              ))}
           </div>
         </div>
       </React.Fragment>

@@ -3,42 +3,13 @@ import image from '../images/market.jpg';
 import Header from './Header';
 import MissionSummary from './OurMission/MissionSummary';
 import quote from '../images/quote.png';
-import feedingGM from '../images/feeding-gm.png';
-import goodGM from '../images/good-food-for-gm.png';
-import GMCA from '../images/gcma.png';
-import realFoodGuide from '../images/real-food-guide.png';
-import openKitch from '../images/open-kitch.png';
-import kindTrust from '../images/kind-trust.png';
-import emerge from '../images/emerge-logo.png';
-import Collaborators from './Collaborators';
+import collaborators from '../collaborators';
+import Collaborator from './Collaborator';
 
 export default class AboutUs extends Component {
-  state = {
-    collaborators: [
-      {
-        name: 'Feeding GM',
-        logo: feedingGM,
-        url: 'https://feedinggtrmcr.org.uk/',
-      },
-      {
-        name: 'Good Food For GM',
-        logo: goodGM,
-        url: 'https://goodfoodgreaterman.wixsite.com/home',
-      },
-      { name: 'GMCA’s Health Hub', logo: GMCA },
-      { name: 'Friends of the Earth', logo: realFoodGuide },
-      { name: 'Real Junk Food Mcr', logo: openKitch },
-      {
-        name: 'Kindling Trust',
-        logo: kindTrust,
-        url: 'https://kindling.org.uk/',
-      },
-      { name: 'FareShare GM', logo: emerge },
-    ],
-  };
+  state = {};
 
   render() {
-    const { collaborators } = this.state;
     return (
       <Fragment>
         <Header image={image} title="About Us" />
@@ -95,7 +66,7 @@ export default class AboutUs extends Component {
           <div className="collaborators-grid mt-4 px-4 md:px-0">
             <h1 className="my-8 text-safe-green mt-12">All Collaborators</h1>
             {collaborators.map((c, i) => (
-              <Collaborators key={i} name={c.name} logo={c.logo} url={c.url} />
+              <Collaborator key={i} name={c.name} logo={c.logo} url={c.url} />
             ))}
           </div>
         </div>

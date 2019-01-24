@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Collaborators({ logo, name, url }) {
+function Collaborator({ logo, name, url }) {
   return (
     <div className="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
       <img src={logo} alt="logo" className="h-16 md:h-24 mr-4" />
@@ -19,4 +19,4 @@ function Collaborators({ logo, name, url }) {
   );
 }
 
-export default Collaborators;
+export default Collaborator;
