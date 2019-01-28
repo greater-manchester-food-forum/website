@@ -8,9 +8,9 @@ Any questions please contact:
 
 ## General Information
 * Tech Stack
-  >* [npm](https://www.npmjs.com) - Package Manager
-  >* [React JS](https://reactjs.org/) - JS Framework
-  >* [Tailwind CSS](https://tailwindcss.com/docs/what-is-tailwind) - CSS Framework
+    * [npm](https://www.npmjs.com) - Package Manager
+    * [React JS](https://reactjs.org/) - JS Framework
+    * [Tailwind CSS](https://tailwindcss.com/docs/what-is-tailwind) - CSS Framework
 * When running locally, changes to JS and CSS files are automatically recognised and hot-reloaded straight into the browser
 * JS linting is configured through the [.eslintrc](.eslintrc) file 
 * There is no server side to this application
