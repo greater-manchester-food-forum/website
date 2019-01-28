@@ -3,8 +3,10 @@
 This application was scaffolded using 'Create React App': https://github.com/facebook/create-react-app
 
 Any questions please contact: 
-* Reece Johnson - [reece.johnson@thoughtworks.com](mailto:reece.johnson@thoughtworks.com) 
-* Flinn Burgess - [f.burgess@thoughtworks.com](mailto:f.burgess@thoughtworks.com) 
+
+- Reece Johnson - [reece.johnson@thoughtworks.com](mailto:reece.johnson@thoughtworks.com) 
+- Flinn Burgess - [f.burgess@thoughtworks.com](mailto:f.burgess@thoughtworks.com) 
+
 
 ## General Information
 * Tech Stack
