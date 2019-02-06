@@ -38,6 +38,13 @@ Creating a production build will minify all of the required files and place them
 
 ```npm run predeploy```
 
+> Note that you'll need to set the buildpack manually, e.g.:
+
+```bash
+heroku buildpacks:set mars/create-react-app -a gmff-staging
+heroku buildpacks:set mars/create-react-app -a gmff-production
+```
+
 ## Production
 
 Greater Manchester Food Forum is hosted on Heroku. The application management dashboard is [here](https://dashboard.heroku.com/teams/greater-manchester-food-forum/apps).
