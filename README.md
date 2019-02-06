@@ -18,11 +18,18 @@ Any questions please contact:
 * There is no server side to this application
 
 ## Run app locally 
+
+Before running the app locally, you will need a `.env` file with local settings:
+```bash
+cp .env.template .env
+```
+
 To run the app locally, in development mode, run these commands whilst in the project root directory:
 
-```npm install```
-
-```npm run start```
+```
+npm install
+npm run start
+```
 
 *You’ll need to have Node 8.10.0 or later on your local development machine.*
 
