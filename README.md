@@ -38,6 +38,10 @@ Creating a production build will minify all of the required files and place them
 
 ```npm run predeploy```
 
+## Production
+
+Greater Manchester Food Forum is hosted on Heroku. The application management dashboard is [here](https://dashboard.heroku.com/teams/greater-manchester-food-forum/apps).
+
 ## Styling 
 The site uses a CSS utility framework called [Tailwind CSS](https://tailwindcss.com/docs/what-is-tailwind) which can be customised through the [tailwind.config.js](tailwind.config.js) file in the root directory. 
 
