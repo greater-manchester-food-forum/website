@@ -7,6 +7,9 @@ Any questions please contact:
 - Reece Johnson - [reece.johnson@thoughtworks.com](mailto:reece.johnson@thoughtworks.com) 
 - Flinn Burgess - [f.burgess@thoughtworks.com](mailto:f.burgess@thoughtworks.com) 
 
+## To Do
+
+- [ ] Fix service workers in staging/production on Heroku.
 
 ## General Information
 * Tech Stack
