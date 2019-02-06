@@ -4,16 +4,21 @@
   "private": true,
   "dependencies": {
     "@rehooks/window-scroll-position": "github:rehooks/window-scroll-position",
+    "autoprefixer": "^9.4.1",
     "classnames": "^2.2.6",
     "dotenv": "^6.2.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
+    "gh-pages": "^2.0.1",
+    "postcss-cli": "^6.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-pure-render": "^1.0.2",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "stylelint-config-recommended": "^2.1.0",
+    "tailwindcss": "^0.7.2"
   },
   "scripts": {
     "build:css": "postcss src/styles/index.css -o src/index.css",
@@ -35,10 +40,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "autoprefixer": "^9.4.1",
-    "gh-pages": "^2.0.1",
-    "postcss-cli": "^6.0.1",
-    "stylelint-config-recommended": "^2.1.0",
-    "tailwindcss": "^0.7.2"
+    "stylelint-config-recommended": "^2.1.0"
   }
 }
