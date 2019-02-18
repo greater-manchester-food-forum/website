@@ -8,7 +8,7 @@ export default class Navigation extends Component {
     navLinks: [
       { text: 'Home', to: '/', exact: true, external: false },
       { text: 'About Us', to: '/about-us', external: false },
-      { text: 'Forum', to: 'https://www.discourse.org/', external: true },
+      { text: 'Forum', to: 'https://forum.gmfoodforum.org', external: true },
     ],
     navOpen: false,
   };
