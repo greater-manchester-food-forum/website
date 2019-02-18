@@ -12,11 +12,7 @@ const NavBarLink = props => {
   font-medium no-underline`;
   if (external)
     return (
-      <a
-        rel="noopener noreferrer"
-        className={classNames}
-        href="https://foodhubgm.trydiscourse.com/"
-      >
+      <a rel="noopener noreferrer" className={classNames} href={to}>
         {text}
       </a>
     );
