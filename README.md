@@ -6,6 +6,7 @@ Any questions please contact:
 
 - Reece Johnson - [reece.johnson@thoughtworks.com](mailto:reece.johnson@thoughtworks.com) 
 - Flinn Burgess - [f.burgess@thoughtworks.com](mailto:f.burgess@thoughtworks.com) 
+- Ryan Brooks – [ryan@slatehorse.com](mailto:ryan@slatehorse.com)
 
 ## To Do
 
@@ -51,6 +52,14 @@ heroku buildpacks:set mars/create-react-app -a gmff-production
 ## Production
 
 Greater Manchester Food Forum is hosted on Heroku. The application management dashboard is [here](https://dashboard.heroku.com/teams/greater-manchester-food-forum/apps).
+
+You can see the "staging" site at:
+
+- https://gmff-staging.herokuapp.com
+
+and the "production" site at:
+
+- https://gmff-production.herokuapp.com
 
 ## Styling 
 The site uses a CSS utility framework called [Tailwind CSS](https://tailwindcss.com/docs/what-is-tailwind) which can be customised through the [tailwind.config.js](tailwind.config.js) file in the root directory. 
