@@ -37,7 +37,7 @@ function Home() {
               Mission Statement
             </Link>
             <a
-              href="https://foodhubgm.trydiscourse.com/"
+              href="https://forum.gmfoodforum.org/categories"
               className="btn btn-green mt-5 no-underline md:ml-4 block"
             >
               Visit the Forum
