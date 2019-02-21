@@ -49,7 +49,7 @@ function AboutUs() {
             Greater Manchester Food Hub - 2019 Mission Statement
           </h2>
           <a
-            href="https://foodhubgm.trydiscourse.com/"
+            href="https://forum.gmfoodforum.org/categories"
             className="btn btn-green no-underline"
           >
             Visit the Forum
