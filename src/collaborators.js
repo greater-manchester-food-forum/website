@@ -25,7 +25,7 @@ const collaborators = [
   {
     name: 'Greater Manchester Food Poverty Alliance',
     logo: gmfpaLogo,
-    url: 'https://www.sustainweb.org/foodpower/map/greater_manchester_food_poverty_alliance/',
+    url: 'https://www.gmpovertyaction.org/greater-manchester-food-poverty-alliance/',
     mainCollaborator: true,
   },
   { name: 'FareShare GM', logo: emerge },
