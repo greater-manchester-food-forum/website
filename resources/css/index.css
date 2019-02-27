@@ -1,26 +1,8 @@
-@tailwind preflight;
-@tailwind components;
-@tailwind utilities;
-
 .home-screen-image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.btn {
-  @apply font-bold py-2 px-4;
-}
-.btn-green {
-  @apply bg-safe-green text-white;
-}
-.btn-green:hover {
-  @apply bg-safe-green-dark;
-}
-
-.btn-white {
-  @apply bg-white;
-  @apply text-safe-green;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.45)), url(img/tom.jpg);
 }
 
 .scroll-down {
@@ -122,17 +104,6 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 
-.navbar-hidden-before-scroll {
-  /* margin-top:-89px; */
-  top: -89px;
-}
-
-.fixed-nav {
-  top:0;
-  transition: top .7s;
-}
-
-
 html {
   scroll-behavior: smooth;
   overflow-y: scroll;
@@ -152,6 +123,32 @@ html {
 
 .mission-container {
   height:275px;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+}
+.mission-container > h2 {
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .mission-container {
+    height:275px;
+    background-size: 0 0;
+    background-position: center;
+    color: #3d4852;
+  }
+  .mission-container > h2 {
+      color: green
+  }
+  
+  .mission-container:hover {
+    background-size: auto;
+    color: white;
+  }
+  .mission-container:hover > h2 {
+    color: white;
+  }
 }
 
 .hide-background-image {

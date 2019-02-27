@@ -1,0 +1,357 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="resources/favicon.ico">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="theme-color" content="#000000">
+      <meta name="keywords" content="food, manchester, sustainable, equity, justice, social, greater manchester,">
+      <link rel="manifest" href="resources/manifest.json">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      <title>GMFF - Greater Manchester Food Forum</title>
+  
+      <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="vendors/css/Grid.css">
+      <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+      <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+      <link rel="stylesheet" type="text/css" href="resources/css/index.css">
+      <link rel="stylesheet" type="text/css" href="resources/css/nav.css">
+
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js">
+      </script>
+      <script type="text/javascript" language="javascript">
+        $(function () {
+          var $win = $(window);
+  
+          $win.scroll(function () {
+            var topNav = document.getElementById("topnavcontainer");
+            if ($win.scrollTop() == 0) {
+              topNav.className = topNav.className.replace(' topnav-opaque','')
+            } else {
+              if(!topNav.className.includes(' topnav-opaque')){
+                topNav.className += ' topnav-opaque';
+              }
+  
+            }
+              console.log(topNav.className);
+          });
+        });
+  
+        function toggleMenu() {
+          var topNav = document.getElementById("topnav");
+          if (topNav.className === "topnav") {
+            topNav.className += " responsive";
+          } else {
+            topNav.className = "topnav";
+          }
+        }
+      </script>
+  
+    </head>
+    <body class="antialiased bg-grey-lighter overflow-x-hidden">
+      <header class="topnav-container" id="topnavcontainer">
+        <nav class="topnav" id="topnav">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-container">
+              <div class="nav-logo-img-container">
+                <img class="nav-logo-img" src="resources/css/img/logo-white.png">
+                <img class="nav-logo-img-transparent" src="resources/css/img/logo-green.png">
+              </div>
+              <div class="nav-logo-text">
+                <div class="nav-logo-text-gm">
+                  Greater Manchester
+                </div>
+                <div class="nav-logo-text-ff">
+                  Food Forum
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="spacer"></a>
+          <a href="index.html">Home</a>
+          <a href="about-us.html">About Us</a>
+          <a href="https://forum.gmfoodforum.org/categories">Forum</a>
+          <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </nav>
+      </header>
+
+    <main>
+      <div 
+        class="h-64 flex items-center bg-center bg-cover" 
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/resources/css/img/market.jpg)"
+      >
+        <div class="mx-auto">
+          <h1 class="text-white text-5xl font-bold tracking-tight leading-tight mb-3 text-center">
+            About Us
+          </h1>
+        </div>
+      </div>
+
+      <div class="py-4 container mx-auto">
+          <div class="text-center">
+            <img
+              src="/resources/css/img/quote.png"
+              alt="quotation-marks"
+              class="h-16 text-center mb-4 mt-8"
+            />
+            <p class="md:w-3/4 mx-auto">
+              As growing numbers of us are realising, food is vital in so many
+              ways: not just in nourishing our bodies and communities, but as a
+              means to vastly improve our collective environmental impact. It is
+              also a key issue in achieving social justice through ensuring
+              everyone can afford and access good-quality, healthy, desirable
+              food.
+              <br />
+              <br />
+              Cities are increasingly seen as a place where food systems can be
+              changed, and Greater Manchester is no exception. The city has a
+              wealth of organisations working on local food growing, food waste
+              prevention, food access for those on low incomes, cooking and much
+              more.
+              <br />
+              <br />
+              The aim of this site, developed collaboratively by some of those
+              organisations, is to bring many more people into a big conversation
+              around food. It will be a hub to find out what is happening in the
+              city, to link organisations who can share knowledge and resources,
+              and to build a coalition of citizens demanding a better food future.
+              We hope that the conversations happening here will shape what this
+              online hub can do in future.
+              <br />
+              <br />
+              Join the conversation and share your ideas!
+            </p>
+  
+            <h2 class="pb-4 text-xl pt-4 text-safe-green font-bold tracking-tight leading-tight mb-5">
+              Greater Manchester Food Hub - 2019 Mission Statement
+            </h2>
+            <a
+              href="https://forum.gmfoodforum.org/categories"
+              class="btn btn-green no-underline"
+            >
+              Visit the Forum
+            </a>
+          </div>
+          <div class="px-4 px-0">
+            <h1 class="my-8 text-safe-green">Our Mission</h1>
+
+              <div class="container mx-auto" id="mission-statement">
+                <div class="mission-grid px-6 md:px-0">
+            
+                  <!-- Mission -->
+                  <div
+                    class="flex flex-col justify-between bg-white border border-grey px-4 py-8 md:px-12 md:py-16 
+                    mission-container bg-no-repeat bg-cover mission"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/resources/css/img/collaboration.jpg);"
+                  >
+                    <h2 class="text-2xl md:text-3xl">
+                      Collaboration
+                    </h2>
+                    <div class="bg-safe-green-dark h-1 w-12 "></div>
+                    <p>
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                    </p>
+                  </div>
+            
+                  <!-- Mission -->
+                  <div
+                    class="flex flex-col justify-between bg-white border border-grey px-4 py-8 md:px-12 md:py-16 
+                    mission-container bg-no-repeat bg-cover mission"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/resources/css/img/food-access.jpg);"
+                  >
+                    <h2 class="text-2xl md:text-3xl">
+                      Food Access
+                    </h2>
+                    <div class="bg-safe-green-dark h-1 w-12 "></div>
+                    <p>
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                    </p>
+                  </div>
+            
+                  <!-- Mission -->
+                  <div
+                    class="flex flex-col justify-between bg-white border border-grey px-4 py-8 md:px-12 md:py-16 
+                    mission-container bg-no-repeat bg-cover mission"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/resources/css/img/local-business.jpg);"
+                  >
+                    <h2 class="text-2xl md:text-3xl">
+                      Local Business
+                    </h2>
+                    <div class="bg-safe-green-dark h-1 w-12 "></div>
+                    <p>
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                    </p>
+                  </div>
+            
+                  <!-- Mission -->
+                  <div
+                    class="flex flex-col justify-between bg-white border border-grey px-4 py-8 md:px-12 md:py-16 
+                    mission-container bg-no-repeat bg-cover mission"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/resources/css/img/healthy-food.jpg);"
+                  >
+                    <h2 class="text-2xl md:text-3xl">
+                      Health
+                    </h2>
+                    <div class="bg-safe-green-dark h-1 w-12 "></div>
+                    <p>
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                        Mission text Mission text Mission text Mission text 
+                    </p>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+  
+          <div class="collaborators-grid mt-4 px-4 md:px-0">
+            <h1 class="my-8 text-safe-green mt-12">All Collaborators</h1>
+              
+              <!-- Collaborator -->  
+              <div class="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
+                <img src="resources/css/img/good-food-for-gm.png" alt="logo" class="h-16 md:h-24 mr-4" />
+                <div class="md:w-3/4 mx-auto">
+                  <h3>Good Food For GM</h3>
+                  <p class="text-sm pr-3 my-4 md:mb-0 md:mt-4">
+                    I am the collaborator description, I describe the collaborator. I am
+                    the collaborator description, I describe the collaborator. I am the
+                    collaborator description, I describe the collaborator.
+                  </p>
+                </div>
+                <a href="https://goodfoodgreaterman.wixsite.com/home" target="_blank" class="btn btn-green text-sm ml-auto no-underline">
+                  Visit
+                </a>
+              </div>
+              
+              <!-- Collaborator -->  
+              <div class="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
+                <img src="resources/css/img/feeding-gm.png" alt="logo" class="h-16 md:h-24 mr-4" />
+                <div class="md:w-3/4 mx-auto">
+                  <h3>Feeding GM</h3>
+                  <p class="text-sm pr-3 my-4 md:mb-0 md:mt-4">
+                    I am the collaborator description, I describe the collaborator. I am
+                    the collaborator description, I describe the collaborator. I am the
+                    collaborator description, I describe the collaborator.
+                  </p>
+                </div>
+                <a href="https://feedinggtrmcr.org.uk/" target="_blank" class="btn btn-green text-sm ml-auto no-underline">
+                  Visit
+                </a>
+              </div>
+              
+              <!-- Collaborator -->  
+              <div class="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
+                <img src="resources/css/img/gcma.png" alt="logo" class="h-16 md:h-24 mr-4" />
+                <div class="md:w-3/4 mx-auto">
+                  <h3>GMCA’s Health Hub</h3>
+                  <p class="text-sm pr-3 my-4 md:mb-0 md:mt-4">
+                    I am the collaborator description, I describe the collaborator. I am
+                    the collaborator description, I describe the collaborator. I am the
+                    collaborator description, I describe the collaborator.
+                  </p>
+                </div>
+                <!-- 
+                <a target="_blank" class="btn btn-green text-sm ml-auto no-underline">
+                  Visit
+                </a>
+                 -->
+              </div>
+              
+              <!-- Collaborator -->  
+              <div class="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
+                <img src="resources/css/img/real-food-guide.png" alt="logo" class="h-16 md:h-24 mr-4" />
+                <div class="md:w-3/4 mx-auto">
+                  <h3>Friends of the Earth</h3>
+                  <p class="text-sm pr-3 my-4 md:mb-0 md:mt-4">
+                    I am the collaborator description, I describe the collaborator. I am
+                    the collaborator description, I describe the collaborator. I am the
+                    collaborator description, I describe the collaborator.
+                  </p>
+                </div>
+                <!-- 
+                <a target="_blank" class="btn btn-green text-sm ml-auto no-underline">
+                  Visit
+                </a>
+                 -->
+              </div>
+              
+              <!-- Collaborator -->  
+              <div class="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
+                <img src="resources/css/img/open-kitch.png" alt="logo" class="h-16 md:h-24 mr-4" />
+                <div class="md:w-3/4 mx-auto">
+                  <h3>Real Junk Food Mcr</h3>
+                  <p class="text-sm pr-3 my-4 md:mb-0 md:mt-4">
+                    I am the collaborator description, I describe the collaborator. I am
+                    the collaborator description, I describe the collaborator. I am the
+                    collaborator description, I describe the collaborator.
+                  </p>
+                </div>
+                <!-- 
+                <a target="_blank" class="btn btn-green text-sm ml-auto no-underline">
+                  Visit
+                </a>
+                 -->
+              </div>
+              
+              <!-- Collaborator -->  
+              <div class="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
+                <img src="resources/css/img/GMPA-GMFPA.jpg" alt="logo" class="h-16 md:h-24 mr-4" />
+                <div class="md:w-3/4 mx-auto">
+                  <h3>Greater Manchester Food Poverty Alliance</h3>
+                  <p class="text-sm pr-3 my-4 md:mb-0 md:mt-4">
+                    I am the collaborator description, I describe the collaborator. I am
+                    the collaborator description, I describe the collaborator. I am the
+                    collaborator description, I describe the collaborator.
+                  </p>
+                </div>
+                <a href="https://www.gmpovertyaction.org/greater-manchester-food-poverty-alliance/" target="_blank" class="btn btn-green text-sm ml-auto no-underline">
+                  Visit
+                </a>
+              </div>
+              
+              <!-- Collaborator -->  
+              <div class="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
+                <img src="resources/css/img/emerge-logo.png" alt="logo" class="h-16 md:h-24 mr-4" />
+                <div class="md:w-3/4 mx-auto">
+                  <h3>FareShare GM</h3>
+                  <p class="text-sm pr-3 my-4 md:mb-0 md:mt-4">
+                    I am the collaborator description, I describe the collaborator. I am
+                    the collaborator description, I describe the collaborator. I am the
+                    collaborator description, I describe the collaborator.
+                  </p>
+                </div>
+                <!-- 
+                <a target="_blank" class="btn btn-green text-sm ml-auto no-underline">
+                  Visit
+                </a>
+                 -->
+              </div>
+
+          </div>
+        </div>
+
+    </main>
+    
+    <footer>
+      <div class="bg-safe-green-darker text-white p-6 text-center text-sm">
+        <p>
+          &copy; Greater Manchester Food Forum 2019. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  </html>
+<!--  
+ -->

@@ -1,0 +1,181 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="resources/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="keywords" content="food, manchester, sustainable, equity, justice, social, greater manchester,">
+    <link rel="manifest" href="resources/manifest.json">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>GMFF - Greater Manchester Food Forum</title>
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/Grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/index.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/nav.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js">
+    </script>
+    <script type="text/javascript" language="javascript">
+      $(function () {
+        var $win = $(window);
+
+        $win.scroll(function () {
+          var topNav = document.getElementById("topnavcontainer");
+          if ($win.scrollTop() == 0) {
+            topNav.className = topNav.className.replace(' topnav-opaque','')
+          } else {
+            if(!topNav.className.includes(' topnav-opaque')){
+              topNav.className += ' topnav-opaque';
+            }
+
+          }
+            console.log(topNav.className);
+        });
+      });
+
+      function toggleMenu() {
+        var topNav = document.getElementById("topnav");
+        if (topNav.className === "topnav") {
+          topNav.className += " responsive";
+        } else {
+          topNav.className = "topnav";
+        }
+      }
+    </script>
+
+  </head>
+  <body class="antialiased bg-grey-lighter overflow-x-hidden">
+    <header class="topnav-container" id="topnavcontainer">
+      <nav class="topnav" id="topnav">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-container">
+            <div class="nav-logo-img-container">
+              <img class="nav-logo-img" src="resources/css/img/logo-white.png">
+              <img class="nav-logo-img-transparent" src="resources/css/img/logo-green.png">
+            </div>
+            <div class="nav-logo-text">
+              <div class="nav-logo-text-gm">
+                Greater Manchester
+              </div>
+              <div class="nav-logo-text-ff">
+                Food Forum
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="spacer"></a>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="https://forum.gmfoodforum.org/categories">Forum</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="py-8 h-screen home-screen-image flex items-center">
+          <div class=" container mx-auto text-white w-full md:w-1/2 flex flex-col p-4 md:p-0 justify-center items-center">
+            <h1 class="text-6xl font-bold tracking-tight leading-tight mb-3 text-center">
+              Our Mission
+            </h1>
+            <p class="text-center hidden md:block text-lg">
+              To provide a place to learn, share and collaborate and make Greater
+              Manchester’s food system better.
+            </p>
+            <div class="text-center md:flex">
+              <a
+                href="about-us.html"
+                class="btn btn-white mt-5 no-underline block mb-6 md:mb-0 block"
+              >
+                Mission Statement
+            </a>
+              <a
+                href="https://forum.gmfoodforum.org/categories"
+                class="btn btn-green mt-5 no-underline md:ml-4 block"
+              >
+                Visit the Forum
+              </a>
+            </div>
+          </div>
+          <a href="#Collaborators">
+            <button
+              class="scroll-down outline-none focus:outline-none active:outline-none"
+              type="button"
+            ></button>    
+          </a>
+      </div>
+      <div class="container mx-auto my-16 md:w-2/3" id="collaborators">
+        <h1 id="Collaborators" class=" mb-4 text-5xl font-bold tracking-tight leading-tight text-safe-green-darker text-center">
+          Collaborators
+        </h1>
+        <p class="text-center mb-8 italic text-grey-darkest">
+          The main organisations involved in this process.
+        </p>
+        <div class="collaborators-grid mt-4 px-4 md:px-0">
+
+           <!-- Collaborator -->
+           <div class="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
+            <img src="resources/css/img/good-food-for-gm.png" alt="logo" class="h-16 md:h-24 mr-4" />
+            <div class="md:w-3/4 mx-auto">
+              <h3>Good Food For GM</h3>
+              <p class="text-sm pr-3 my-4 md:mb-0 md:mt-4">
+                  collaborator description collaborator description 
+                  collaborator description collaborator description 
+                  collaborator description collaborator description 
+              </p>
+            </div>
+            <a target="_blank" href="https://goodfoodgreaterman.wixsite.com/home" class="btn btn-green text-sm ml-auto no-underline">
+              Visit
+            </a>
+          </div>
+          
+          <!-- Collaborator -->
+          <div class="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
+            <img src="resources/css/img/feeding-gm.png" alt="logo" class="h-16 md:h-24 mr-4" />
+            <div class="md:w-3/4 mx-auto">
+              <h3>Feeding GM</h3>
+              <p class="text-sm pr-3 my-4 md:mb-0 md:mt-4">
+                  collaborator description collaborator description 
+                  collaborator description collaborator description 
+                  collaborator description collaborator description 
+              </p>
+            </div>
+            <a target="_blank" href="https://feedinggtrmcr.org.uk/" class="btn btn-green text-sm ml-auto no-underline">
+              Visit
+            </a>
+          </div>
+
+           <!-- Collaborator -->
+           <div class="shadow-md bg-white text-grey-darkest text-xl md:flex items-center px-6 py-6 md:py-12 mb-6">
+            <img src="resources/css/img/GMPA-GMFPA.jpg" alt="logo" class="h-16 md:h-24 mr-4" />
+            <div class="md:w-3/4 mx-auto">
+              <h3>Greater Manchester Food Poverty Alliance</h3>
+              <p class="text-sm pr-3 my-4 md:mb-0 md:mt-4">
+                  collaborator description collaborator description 
+                  collaborator description collaborator description 
+                  collaborator description collaborator description 
+              </p>
+            </div>
+            <a target="_blank" href="https://www.gmpovertyaction.org/greater-manchester-food-poverty-alliance/" class="btn btn-green text-sm ml-auto no-underline">
+              Visit
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="bg-safe-green-darker text-white p-6 text-center text-sm">
+        <p>
+          &copy; Greater Manchester Food Forum 2019. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  </html>
